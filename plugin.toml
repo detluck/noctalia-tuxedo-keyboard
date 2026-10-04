@@ -1,0 +1,33 @@
+id           = "detluck/tuxedo-keyboard"
+name         = "TUXEDO Keyboard"
+version      = "1.0.0"
+plugin_api   = 31
+author       = "detluck"
+license      = "MIT"
+icon         = "keyboard"
+description  = "Keyboard backlight brightness, RGB color effects, and theme sync for TUXEDO / Clevo laptops via Linux sysfs."
+tags         = ["hardware", "theming", "system", "utility", "bar", "panel", "service"]
+dependencies = []
+
+[[widget]]
+id    = "backlight"
+entry = "widget.luau"
+
+  [[widget.setting]]
+  key             = "show_percentage"
+  type            = "bool"
+  label_key       = "settings.show_percentage.label"
+  description_key = "settings.show_percentage.description"
+  default         = true
+
+[[service]]
+id    = "monitor"
+entry = "service.luau"
+
+[[panel]]
+id        = "panel"
+entry     = "panel.luau"
+width     = 460
+height    = 580
+placement = "floating"
+position  = "center"

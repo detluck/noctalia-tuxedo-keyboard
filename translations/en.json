@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "show_percentage": {
+      "label": "Show Brightness Percentage",
+      "description": "Display brightness percentage number next to keyboard icon in the bar"
+    }
+  },
+  "ui": {
+    "panel_title": "Keyboard Backlight Control",
+    "driver_not_found": "TUXEDO Keyboard Driver Not Detected",
+    "driver_not_found_hint": "Make sure tuxedo-drivers is installed and the tuxedo_keyboard kernel module is loaded:\nmodprobe tuxedo_keyboard",
+    "refresh": "Refresh",
+    "brightness": "LED Brightness",
+    "lighting_effect": "Lighting Effect",
+    "theme_sync": "Theme Sync",
+    "theme_role": "Palette Role",
+    "theme_synced": "Theme role set to: ",
+    "white": "White",
+    "tuxedo_blue": "Tuxedo Blue",
+    "razer_green": "Razer Green",
+    "spectrum": "Rainbow Cycle",
+    "breathe": "Breathe",
+    "off": "Off",
+    "picker": "Picker",
+    "custom_color_placeholder": "Hex color (e.g. #FF0055)",
+    "set": "Set",
+    "all_zones": "All Zones",
+    "multi_zone": "%d RGB Zones Detected",
+    "single_zone": "Single-Zone RGB Backlight"
+  }
+}

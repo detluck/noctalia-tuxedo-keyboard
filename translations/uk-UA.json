@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "show_percentage": {
+      "label": "Показувати відсоток яскравості",
+      "description": "Відображати відсоток яскравості поруч із піктограмою клавіатури на панелі"
+    }
+  },
+  "ui": {
+    "panel_title": "Керування підсвічуванням клавіатури",
+    "driver_not_found": "Драйвер TUXEDO Keyboard не знайдено",
+    "driver_not_found_hint": "Переконайтеся, що пакет tuxedo-drivers встановлено та модуль ядра завантажено:\nmodprobe tuxedo_keyboard",
+    "refresh": "Оновити",
+    "brightness": "Яскравість підсвічування",
+    "lighting_effect": "Ефект підсвічування",
+    "theme_sync": "Синхронізація з темою",
+    "theme_role": "Роль палітри",
+    "theme_synced": "Встановлено роль теми: ",
+    "white": "Білий",
+    "tuxedo_blue": "Синій Tuxedo",
+    "razer_green": "Зелений Razer",
+    "spectrum": "Веселка",
+    "breathe": "Дихання",
+    "off": "Вимкнено",
+    "picker": "Палітра",
+    "custom_color_placeholder": "HEX-колір (напр. #FF0055)",
+    "set": "Застосувати",
+    "all_zones": "Всі зони",
+    "multi_zone": "Виявлено %d RGB-зон(и)",
+    "single_zone": "Однозонне RGB-підсвічування"
+  }
+}

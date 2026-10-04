@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "show_percentage": {
+      "label": "Helligkeit in Prozent anzeigen",
+      "description": "Prozentzahl neben dem Tastatursymbol in der Leiste anzeigen"
+    }
+  },
+  "ui": {
+    "panel_title": "Tastaturbeleuchtung",
+    "driver_not_found": "TUXEDO-Tastaturtreiber nicht gefunden",
+    "driver_not_found_hint": "Stelle sicher, dass tuxedo-drivers installiert und das Kernelmodul geladen ist:\nmodprobe tuxedo_keyboard",
+    "refresh": "Aktualisieren",
+    "brightness": "LED-Helligkeit",
+    "lighting_effect": "Beleuchtungseffekt",
+    "theme_sync": "Theme-Sync",
+    "theme_role": "Farbrolle",
+    "theme_synced": "Theme-Rolle gesetzt auf: ",
+    "white": "Weiß",
+    "tuxedo_blue": "Tuxedo-Blau",
+    "razer_green": "Razer-Grün",
+    "spectrum": "Regenbogenzyklus",
+    "breathe": "Atmen",
+    "off": "Aus",
+    "picker": "Farbauswahl",
+    "custom_color_placeholder": "Hex-Farbe (z. B. #FF0055)",
+    "set": "Übernehmen",
+    "all_zones": "Alle Zonen",
+    "multi_zone": "%d RGB-Zonen erkannt",
+    "single_zone": "Ein-Zonen-RGB-Hintergrundbeleuchtung"
+  }
+}
