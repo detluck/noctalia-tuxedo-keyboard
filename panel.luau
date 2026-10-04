@@ -224,7 +224,7 @@ function update()
     }),
   }))
 
-  -- Row 1: Presets & Theme Sync
+  -- Row 1: Theme Sync & Off
   table.insert(cardChildren, ui.row({ gap = 6, justify = "space_between", paddingV = 2 }, {
     ui.button({
       text = tr("ui.theme_sync", "Theme Sync"),
@@ -246,20 +246,25 @@ function update()
       end
     }),
     ui.button({
-      text = tr("ui.white", "White"),
-      variant = (activeMode == "white") and "primary" or "outline",
-      selected = (activeMode == "white"),
+      text = tr("ui.off", "Off"),
+      variant = (activeMode == "off") and "primary" or "ghost",
+      selected = (activeMode == "off"),
       controlSize = "sm",
       flexGrow = 1,
       onClick = function()
-        state.activeLightingMode = "white"
-        state.currentColorHex = "#FFFFFF"
+        state.activeLightingMode = "off"
         noctalia.state.set("tuxedo_keyboard", state)
         lastRenderedSignature = ""
         update()
-        applyColorToTargets("#FFFFFF")
+        for _, z in ipairs(zones) do
+          Tuxedo.setBrightness(0, z.path, z.maxBrightness)
+        end
       end
     }),
+  }))
+
+  -- Row 2: Color Presets
+  table.insert(cardChildren, ui.row({ gap = 6, justify = "space_between", paddingV = 2 }, {
     ui.button({
       text = tr("ui.tuxedo_blue", "Tuxedo Blue"),
       variant = (activeMode == "blue") and "primary" or "outline",
@@ -290,9 +295,24 @@ function update()
         applyColorToTargets("#00FF00")
       end
     }),
+    ui.button({
+      text = tr("ui.white", "White"),
+      variant = (activeMode == "white") and "primary" or "outline",
+      selected = (activeMode == "white"),
+      controlSize = "sm",
+      flexGrow = 1,
+      onClick = function()
+        state.activeLightingMode = "white"
+        state.currentColorHex = "#FFFFFF"
+        noctalia.state.set("tuxedo_keyboard", state)
+        lastRenderedSignature = ""
+        update()
+        applyColorToTargets("#FFFFFF")
+      end
+    }),
   }))
 
-  -- Row 2: Animations & Off
+  -- Row 3: Animations
   table.insert(cardChildren, ui.row({ gap = 6, justify = "space_between", paddingV = 2 }, {
     ui.button({
       text = tr("ui.spectrum", "Rainbow Cycle"),
@@ -318,21 +338,6 @@ function update()
         noctalia.state.set("tuxedo_keyboard", state)
         lastRenderedSignature = ""
         update()
-      end
-    }),
-    ui.button({
-      text = tr("ui.off", "Off"),
-      variant = (activeMode == "off") and "primary" or "ghost",
-      selected = (activeMode == "off"),
-      controlSize = "sm",
-      onClick = function()
-        state.activeLightingMode = "off"
-        noctalia.state.set("tuxedo_keyboard", state)
-        lastRenderedSignature = ""
-        update()
-        for _, z in ipairs(zones) do
-          Tuxedo.setBrightness(0, z.path, z.maxBrightness)
-        end
       end
     }),
   }))
