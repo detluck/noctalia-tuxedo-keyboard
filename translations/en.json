@@ -1,10 +1,4 @@
 {
-  "settings": {
-    "show_percentage": {
-      "label": "Show Brightness Percentage",
-      "description": "Display brightness percentage number next to keyboard icon in the bar"
-    }
-  },
   "ui": {
     "panel_title": "Keyboard Backlight Control",
     "driver_not_found": "TUXEDO Keyboard Driver Not Detected",

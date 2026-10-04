@@ -19,12 +19,7 @@ function update()
   local mode = state.activeLightingMode or "theme"
   local model = state.model or "TUXEDO Keyboard"
 
-  local showPct = noctalia.getConfig("show_percentage")
-  if showPct and brightness > 0 and mode ~= "off" then
-    barWidget.setText(string.format("%d%%", brightness))
-  else
-    barWidget.setText("")
-  end
+  barWidget.setText("")
 
   local statusMode = mode == "theme" and ("Theme (" .. (state.themeRole or "primary") .. ")")
     or mode == "spectrum" and "Rainbow Cycle"

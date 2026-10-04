@@ -33,12 +33,6 @@ Add the bar widget (`detluck/tuxedo-keyboard:backlight`) in **Settings â†’ Bar â
 noctalia msg panel-toggle detluck/tuxedo-keyboard:panel
 ```
 
-## Settings
-
-| Setting           | Type   | Default | Description                                                                                 |
-| ----------------- | ------ | ------- | ------------------------------------------------------------------------------------------- |
-| `show_percentage` | `bool` | `true`  | Display keyboard backlight brightness percentage number next to the icon on the bar widget. |
-
 ## IPC
 
 Dispatch events to the background monitor service:
